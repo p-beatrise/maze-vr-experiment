@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="SurveyConfig" format=3 uid="uid://bpsojq62h6ajo"]
+
+[ext_resource type="Script" uid="uid://dkjwwy01clwq4" path="res://game/survey/SurveyQuestion.cs" id="1_6utm1"]
+[ext_resource type="Script" uid="uid://cxji5enf7kyx8" path="res://game/survey/SurveyConfig.cs" id="1_vy4ti"]
+
+[sub_resource type="Resource" id="Resource_g4ghx"]
+script = ExtResource("1_6utm1")
+QuestionText = "Es ļoti labi spēju dot norādes"
+FieldName = "norades"
+Options = PackedStringArray("Pilnībā nepiekrītu", "Daļēji nepiekrītu", "Neitrāli", "Daļēji piekrītu", "Pilnībā piekrītu")
+metadata/_custom_type_script = "uid://dkjwwy01clwq4"
+
+[sub_resource type="Resource" id="Resource_6utm1"]
+script = ExtResource("1_6utm1")
+QuestionText = "Mana virziena izjūta ir ļoti laba"
+FieldName = "virziena_sajuta"
+Options = PackedStringArray("Pilnībā nepiekrītu", "Daļēji nepiekrītu", "Neitrāli", "Daļēji piekrītu", "Pilnībā piekrītu")
+metadata/_custom_type_script = "uid://dkjwwy01clwq4"
+
+[sub_resource type="Resource" id="Resource_s2iab"]
+script = ExtResource("1_6utm1")
+QuestionText = "Es parasti varu atcerēties ceļu, pa kuru esmu gājis tikai vienu reizi"
+FieldName = "atcereties_celu"
+Options = PackedStringArray("Pilnībā nepiekrītu", "Daļēji nepiekrītu", "Neitrāli", "Daļēji piekrītu", "Pilnībā piekrītu")
+metadata/_custom_type_script = "uid://dkjwwy01clwq4"
+
+[sub_resource type="Resource" id="Resource_age01"]
+script = ExtResource("1_6utm1")
+QuestionText = "Vecums"
+FieldName = "vecums"
+IsNumeric = true
+MinValue = 16
+metadata/_custom_type_script = "uid://dkjwwy01clwq4"
+
+[sub_resource type="Resource" id="Resource_csbbr"]
+script = ExtResource("1_6utm1")
+QuestionText = "Dzimums"
+FieldName = "dzimums"
+Options = PackedStringArray("Vīrietis", "Sieviete", "Cits")
+metadata/_custom_type_script = "uid://dkjwwy01clwq4"
+
+[sub_resource type="Resource" id="Resource_1jmlt"]
+script = ExtResource("1_6utm1")
+QuestionText = "Izglītības līmenis"
+FieldName = "izglitibas_limenis"
+Options = PackedStringArray("Vidējā izglītība", "Vidējā profesionālā izglītība", "Bakalaura grāds", "Maģistra grāds", "Doktora grāds")
+metadata/_custom_type_script = "uid://dkjwwy01clwq4"
+
+[sub_resource type="Resource" id="Resource_x4s2p"]
+script = ExtResource("1_6utm1")
+QuestionText = "Cik stundas savā mūžā esat spēlējis spēles, kas ietver navigāciju vidē"
+FieldName = "cik_stundas"
+Options = PackedStringArray("0 (necik)", "1-100", "100-1000", "1000+")
+metadata/_custom_type_script = "uid://dkjwwy01clwq4"
+
+[sub_resource type="Resource" id="Resource_t0f8k"]
+script = ExtResource("1_6utm1")
+QuestionText = "Vai pirms šī eksperimenta esat izmantojis VR brilles?"
+FieldName = "vai_esat_izmantojis"
+Options = PackedStringArray("Jā", "Nē")
+metadata/_custom_type_script = "uid://dkjwwy01clwq4"
+
+[sub_resource type="Resource" id="Resource_iqggy"]
+script = ExtResource("1_6utm1")
+QuestionText = "Vai eksperimenta laikā izjutāt šūpes kaiti? Tā raksturojama ar šādiem simptomiem: nelabums, reibonis, svīšana, līdzsvara zudums"
+FieldName = "supes_kaite"
+Options = PackedStringArray("Jā", "Nē")
+metadata/_custom_type_script = "uid://dkjwwy01clwq4"
+
+[resource]
+script = ExtResource("1_vy4ti")
+Questions = [SubResource("Resource_g4ghx"), SubResource("Resource_6utm1"), SubResource("Resource_s2iab"), SubResource("Resource_age01"), SubResource("Resource_csbbr"), SubResource("Resource_1jmlt"), SubResource("Resource_x4s2p"), SubResource("Resource_t0f8k"), SubResource("Resource_iqggy")]
+metadata/_custom_type_script = "uid://cxji5enf7kyx8"

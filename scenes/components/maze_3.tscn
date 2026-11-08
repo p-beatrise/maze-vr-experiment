@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://t8yjbdxefaxx"]
+
+[ext_resource type="Script" uid="uid://ds6je4x8mjsmk" path="res://game/experiment/MazeLayoutConfig.cs" id="0_cfg3"]
+[ext_resource type="Script" uid="uid://cvpmir3hto816" path="res://game/survey/VRButton.cs" id="0_vrbtn3"]
+[ext_resource type="PackedScene" uid="uid://ky88iwli82so" path="res://scenes/components/maze_main.tscn" id="1_58yi3"]
+[ext_resource type="PackedScene" uid="uid://coi7kslbho8t" path="res://scenes/components/maze_room.tscn" id="2_v8w5w"]
+[ext_resource type="PackedScene" uid="uid://cfrj4edudxjx1" path="res://scenes/components/maze_room_flipped.tscn" id="3_tnpvu"]
+[ext_resource type="LightmapGIData" uid="uid://dcem3i51sue1b" path="res://scenes/components/lightmaps/maze_3.lmbake" id="6_daxe8"]
+[ext_resource type="ArrayOccluder3D" uid="uid://dy0etjfa8nucl" path="res://scenes/occluders/maze_3.occ" id="7_302ae"]
+
+[sub_resource type="Curve" id="Curve_daxe8"]
+_data = [Vector2(0, 0), 0.0, 1.6614851, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_302ae"]
+
+[sub_resource type="Curve" id="Curve_fo83t"]
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_fo83t"]
+curve_x = SubResource("Curve_daxe8")
+curve_y = SubResource("Curve_302ae")
+curve_z = SubResource("Curve_fo83t")
+
+[sub_resource type="Environment" id="Environment_4wvs3"]
+background_mode = 1
+background_color = Color(0.58008283, 0.7701363, 0.930232, 1)
+ambient_light_color = Color(0.9079417, 0.9079417, 0.90794164, 1)
+adjustment_color_correction = SubResource("CurveXYZTexture_fo83t")
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_k4gn0"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_f2cc2"]
+
+[node name="World" type="Node3D" unique_id=1823660607]
+script = ExtResource("0_cfg3")
+TargetSequence = PackedInt32Array(7, 4, 0)
+
+[node name="Maze" type="Node3D" parent="." unique_id=1566521023]
+
+[node name="maze_main" parent="Maze" unique_id=217553851 instance=ExtResource("1_58yi3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="rooms" type="Node3D" parent="Maze" unique_id=252857312]
+
+[node name="maze_room_blended2" parent="Maze/rooms" unique_id=906616559 instance=ExtResource("2_v8w5w")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 12, 0, 0)
+RoomIndex = 1
+
+[node name="maze_room_blended3" parent="Maze/rooms" unique_id=313929700 instance=ExtResource("2_v8w5w")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12, 0, -12)
+RoomIndex = 2
+
+[node name="maze_room_blended4" parent="Maze/rooms" unique_id=1604530421 instance=ExtResource("2_v8w5w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
+RoomIndex = 5
+
+[node name="maze_room_blended6" parent="Maze/rooms" unique_id=1243101827 instance=ExtResource("2_v8w5w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 12)
+RoomIndex = 6
+
+[node name="maze_room_blended7" parent="Maze/rooms" unique_id=2028758889 instance=ExtResource("2_v8w5w")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -12, 0, -12)
+RoomIndex = 8
+
+[node name="maze_room_blended8" parent="Maze/rooms" unique_id=1653115244 instance=ExtResource("2_v8w5w")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 0, 0, 0)
+RoomIndex = 4
+
+[node name="maze_room_flipped9" parent="Maze/rooms" unique_id=1429694039 instance=ExtResource("3_tnpvu")]
+transform = Transform3D(1, -7.642742e-15, -8.742278e-08, 0, 1, -8.742278e-08, -8.742278e-08, -8.742278e-08, -1, 0, 0, 12)
+RoomIndex = 3
+
+[node name="maze_room_flipped11" parent="Maze/rooms" unique_id=1253876277 instance=ExtResource("3_tnpvu")]
+transform = Transform3D(-1, -8.742278e-08, 8.742278e-08, -8.742278e-08, 1, 0, 8.742278e-08, 7.642742e-15, 1, 12, 0, 12)
+
+[node name="maze_room_flipped10" parent="Maze/rooms" unique_id=1330490837 instance=ExtResource("3_tnpvu")]
+transform = Transform3D(-4.371139e-08, -3.821371e-15, -1, -8.742278e-08, 1, 0, -1, -8.742278e-08, 4.371139e-08, -12, 0, 0)
+RoomIndex = 7
+
+[node name="spawn_point" type="Marker3D" parent="." unique_id=1026616729]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 18)
+
+[node name="StartTimerButton" type="Node3D" parent="." unique_id=711413642]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -10, 1, 19.5)
+script = ExtResource("0_vrbtn3")
+ButtonText = "Sākt meklēt"
+Width = 0.9
+Height = 0.9
+Depth = 0.05
+FontSize = 96
+metadata/_custom_type_script = "uid://cvpmir3hto816"
+
+[node name="Marker3D" type="Marker3D" parent="StartTimerButton" unique_id=429167217]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1047835296]
+environment = SubResource("Environment_4wvs3")
+camera_attributes = SubResource("CameraAttributesPractical_k4gn0")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1395491785]
+transform = Transform3D(0.33033493, 0.9146593, 0.23297472, -0.39664212, -0.08945599, 0.913604, 0.8564775, -0.3942029, 0.33324206, 7.682, 14.894083, 6.545)
+light_bake_mode = 1
+
+[node name="LightmapGI" type="LightmapGI" parent="." unique_id=2088696975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.029235, 0)
+camera_attributes = SubResource("CameraAttributesPractical_f2cc2")
+light_data = ExtResource("6_daxe8")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="." unique_id=1390088131]
+occluder = ExtResource("7_302ae")

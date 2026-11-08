@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bvwm2w5w5stks"]
+
+[ext_resource type="PackedScene" uid="uid://csauo45scewdm" path="res://models/model_pack/Damaged Couch.glb" id="1_mqmvq"]
+
+[node name="Root Scene" unique_id=1703138683 instance=ExtResource("1_mqmvq")]

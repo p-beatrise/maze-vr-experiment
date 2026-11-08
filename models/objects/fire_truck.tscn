@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://blh3o63rwt6hv"]
+
+[ext_resource type="PackedScene" uid="uid://dvbox2stnlwbq" path="res://models/model_pack/Fire Truck.glb" id="1_5phbw"]
+
+[node name="Fire Truck" unique_id=1579314112 instance=ExtResource("1_5phbw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.8142029, 0)

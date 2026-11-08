@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bv34281tcdpb8"]
+
+[ext_resource type="PackedScene" uid="uid://c0sq27qpsv44s" path="res://models/model_pack/Eight Vases.glb" id="1_qd8wb"]
+
+[node name="Eight Vases" unique_id=922573360 instance=ExtResource("1_qd8wb")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)

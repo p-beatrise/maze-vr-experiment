@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cn035hdr38neu"]
+
+[ext_resource type="PackedScene" uid="uid://4wf1vnydqeat" path="res://models/model_pack/Boat.glb" id="1_glun0"]
+
+[node name="Root Scene" unique_id=1221534652 instance=ExtResource("1_glun0")]
+
+[node name="Boat-ver1" parent="RootNode" parent_id_path=PackedInt32Array(1069550066) index="0" unique_id=1704120063]
+transform = Transform3D(100, 0, 0, 0, 100, -4.371139e-06, 0, 4.371139e-06, 100, 0, 0.27006304, 0)

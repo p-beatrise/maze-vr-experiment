@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://re1guxvx4fch"]
+
+[ext_resource type="PackedScene" uid="uid://b6cepoa5pfxcr" path="res://models/model_pack/Pizza.glb" id="1_airsf"]
+
+[node name="Root Scene" unique_id=40005804 instance=ExtResource("1_airsf")]

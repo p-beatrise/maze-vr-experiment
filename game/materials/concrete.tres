@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ca5le4okcb5ku"]
+
+[ext_resource type="Texture2D" uid="uid://bwexsesgpx4fj" path="res://game/textures/concrete/concrete_floor_worn_001_diff_512M_even_lighter.jpg" id="1_c80g2"]
+
+[resource]
+metallic = 1.0
+metallic_texture = ExtResource("1_c80g2")
+uv1_scale = Vector3(21.77, 21.77, 21.77)
+uv1_offset = Vector3(0.695, 0, 0)

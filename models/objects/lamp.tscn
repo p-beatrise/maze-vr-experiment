@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cjff7b1c307ep"]
+
+[ext_resource type="PackedScene" uid="uid://t4p7f51rhcmd" path="res://models/model_pack/Light Stand.glb" id="1_j07ey"]
+
+[node name="Root Scene" unique_id=5176900 instance=ExtResource("1_j07ey")]
+
+[node name="Light_Stand1" parent="RootNode" parent_id_path=PackedInt32Array(1338563926) index="0" unique_id=2025695062]
+transform = Transform3D(50, 0, 0, 0, -2.1855694e-06, 50, 0, -50, -2.1855694e-06, 0, 0, 0)

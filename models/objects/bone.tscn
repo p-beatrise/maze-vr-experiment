@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dy4walotvcvrk"]
+
+[ext_resource type="PackedScene" uid="uid://cidcxl1v47hgl" path="res://models/model_pack/Bone.glb" id="1_ljky2"]
+
+[node name="Root Scene" unique_id=1063570129 instance=ExtResource("1_ljky2")]
+
+[node name="RootNode" parent="." index="0" unique_id=211750851]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.52727103, 0)
+
+[node name="Bone" parent="RootNode" index="0" unique_id=128687829]
+transform = Transform3D(300, 0, 0, 0, -1.3113417e-05, 300, 0, -300, -1.3113417e-05, 0, 0, 0)

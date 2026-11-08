@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cjbf37dvln27r"]
+
+[ext_resource type="PackedScene" uid="uid://co50jo0m47uf0" path="res://models/model_pack/Ice Cream.glb" id="1_64s54"]
+
+[node name="Root Scene" unique_id=623442844 instance=ExtResource("1_64s54")]
+
+[node name="IceCream_3" parent="RootNode" parent_id_path=PackedInt32Array(809471151) index="0" unique_id=800405169]
+transform = Transform3D(200, 0, 0, 0, -8.742278e-06, 200, 0, -200, -8.742278e-06, 0, 0, 0)

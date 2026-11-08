@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://8gcwrjak5t2f"]
+
+[ext_resource type="PackedScene" uid="uid://bdabepd3w1i4w" path="res://models/model_pack/Ladder.glb" id="1_owq55"]
+
+[node name="Root Scene" unique_id=253250063 instance=ExtResource("1_owq55")]

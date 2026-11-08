@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bk7invx8gks4t"]
+
+[ext_resource type="PackedScene" uid="uid://c4k22g51abp18" path="res://models/model_pack/House.glb" id="1_dnfy5"]
+
+[node name="House" unique_id=1797531500 instance=ExtResource("1_dnfy5")]
+
+[node name="House_Cube_028" parent="." index="0" unique_id=1059133145]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)

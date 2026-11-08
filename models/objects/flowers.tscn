@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cysqgt7gcshmy"]
+
+[ext_resource type="PackedScene" uid="uid://cvi3v21841eo3" path="res://models/model_pack/Flower Group-hfPzQAedOe.glb" id="1_d7xn7"]
+
+[node name="Root Scene" unique_id=1269297810 instance=ExtResource("1_d7xn7")]

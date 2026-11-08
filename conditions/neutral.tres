@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="MazeConditionConfig" format=3 uid="uid://wc2ffcbq1bn3"]
+
+[ext_resource type="Script" uid="uid://dviw4ijtknc36" path="res://game/experiment/MazeConditionConfig.cs" id="1"]
+[ext_resource type="PackedScene" uid="uid://cwddgmcao8vdk" path="res://models/objects/box.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bcvvp8l8psu7j" path="res://models/objects/cat.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://cng3p2a6fgjrv" path="res://models/objects/fox.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://cmo1fh7p28v5q" path="res://models/objects/bird.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://cn035hdr38neu" path="res://models/objects/boat.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://dy4walotvcvrk" path="res://models/objects/bone.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://bihj1x84pepna" path="res://models/objects/duck.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://cjff7b1c307ep" path="res://models/objects/lamp.tscn" id="8_nwt52"]
+[ext_resource type="PackedScene" uid="uid://b4t0qf3ymwdg1" path="res://models/objects/bench.tscn" id="10"]
+
+[resource]
+script = ExtResource("1")
+MazeId = "neutral"
+RoomObjectNames = PackedStringArray("Kaste", "Kaķis", "Lapsa", "Papagailis", "Laiva", "Kauls", "Pīle", "Lampa", "Soliņš")
+RoomObjectScenes = [ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7"), ExtResource("8"), ExtResource("8_nwt52"), ExtResource("10")]

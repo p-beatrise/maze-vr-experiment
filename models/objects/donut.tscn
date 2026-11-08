@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bkdher0inaci"]
+
+[ext_resource type="PackedScene" uid="uid://cvnu0qnoqj8i4" path="res://models/model_pack/Donut.glb" id="1_kts61"]
+
+[node name="Root Scene" unique_id=120426474 instance=ExtResource("1_kts61")]
+
+[node name="Donut1" parent="RootNode" parent_id_path=PackedInt32Array(203567778) index="0" unique_id=1423224897]
+transform = Transform3D(200, 0, 0, 0, -8.742278e-06, 200, 0, -200, -8.742278e-06, 0, 0.25025922, 0)

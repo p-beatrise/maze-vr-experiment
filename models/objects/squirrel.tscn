@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dlyvatbgshlsl"]
+
+[ext_resource type="PackedScene" uid="uid://bb774ji5kvso" path="res://models/model_pack/Lowpoly Squirrel.glb" id="1_bslt8"]
+
+[node name="Lowpoly Squirrel" unique_id=1900747833 instance=ExtResource("1_bslt8")]
+transform = Transform3D(-3, 0, -2.6226832e-07, 0, 3, 0, 2.6226832e-07, 0, -3, 0, 1.3129345, 0)

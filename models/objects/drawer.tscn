@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dow2mflq04jh3"]
+
+[ext_resource type="PackedScene" uid="uid://dqxn8dhgbxco1" path="res://models/model_pack/Drawer.glb" id="1_vqgnf"]
+
+[node name="Root Scene" unique_id=422467503 instance=ExtResource("1_vqgnf")]

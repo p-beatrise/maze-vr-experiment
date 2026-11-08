@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bcvvp8l8psu7j"]
+
+[ext_resource type="PackedScene" uid="uid://xvcigcrquux3" path="res://models/model_pack/Cat.glb" id="1_eajw5"]
+
+[node name="Cat" unique_id=851786570 instance=ExtResource("1_eajw5")]
+
+[node name="Geo_Cat" parent="." index="0" unique_id=1131763023]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0.71405494, 0)

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b4t0qf3ymwdg1"]
+
+[ext_resource type="PackedScene" uid="uid://beghq30h3hysv" path="res://models/model_pack/Bench.glb" id="1_0x8ft"]
+
+[node name="Root Scene" unique_id=423810406 instance=ExtResource("1_0x8ft")]
+
+[node name="Bench_2" parent="RootNode" parent_id_path=PackedInt32Array(416272837) index="0" unique_id=1641257897]
+transform = Transform3D(250, 0, 0, 0, -1.0927847e-05, 250, 0, -250, -1.0927847e-05, 0, 0, 0)
