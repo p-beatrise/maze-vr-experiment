@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://cc2hfctcu81kx"]
+
+[ext_resource type="PackedScene" uid="uid://cqx0l8m2ugwic" path="res://game/player/player.tscn" id="1_nld2j"]
+[ext_resource type="Material" uid="uid://d1slo05kgthyb" path="res://game/materials/noise_floor_1.tres" id="2_85q8e"]
+[ext_resource type="PackedScene" uid="uid://bcvvp8l8psu7j" path="res://models/objects/cat.tscn" id="2_s7dif"]
+[ext_resource type="Script" uid="uid://dendsceneman1" path="res://game/experiment/EndSceneManager.cs" id="3_end"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_u7rsi"]
+size = Vector3(100, 0.1, 100)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nld2j"]
+data = PackedVector3Array(-50, 0.049999997, 50, 50, 0.049999997, 50, -50, -0.049999997, 50, 50, 0.049999997, 50, 50, -0.049999997, 50, -50, -0.049999997, 50, 50, 0.049999997, -50, -50, 0.049999997, -50, 50, -0.049999997, -50, -50, 0.049999997, -50, -50, -0.049999997, -50, 50, -0.049999997, -50, 50, 0.049999997, 50, 50, 0.049999997, -50, 50, -0.049999997, 50, 50, 0.049999997, -50, 50, -0.049999997, -50, 50, -0.049999997, 50, -50, 0.049999997, -50, -50, 0.049999997, 50, -50, -0.049999997, -50, -50, 0.049999997, 50, -50, -0.049999997, 50, -50, -0.049999997, -50, 50, 0.049999997, 50, -50, 0.049999997, 50, 50, 0.049999997, -50, -50, 0.049999997, 50, -50, 0.049999997, -50, 50, 0.049999997, -50, -50, -0.049999997, 50, 50, -0.049999997, 50, -50, -0.049999997, -50, 50, -0.049999997, 50, 50, -0.049999997, -50, -50, -0.049999997, -50)
+
+[sub_resource type="Curve" id="Curve_s7dif"]
+_data = [Vector2(0, 0), 0.0, 1.6614851, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_85q8e"]
+
+[sub_resource type="Curve" id="Curve_fjxr3"]
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_u6lbi"]
+curve_x = SubResource("Curve_s7dif")
+curve_y = SubResource("Curve_85q8e")
+curve_z = SubResource("Curve_fjxr3")
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ojf8p"]
+
+[sub_resource type="Sky" id="Sky_4835h"]
+sky_material = SubResource("ProceduralSkyMaterial_ojf8p")
+
+[sub_resource type="Environment" id="Environment_gxua3"]
+background_mode = 2
+background_color = Color(0.9675619, 0.96378523, 0.96371835, 1)
+sky = SubResource("Sky_4835h")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+adjustment_color_correction = SubResource("CurveXYZTexture_u6lbi")
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_hyprt"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_notft"]
+
+[sub_resource type="LightmapGIData" id="LightmapGIData_pmkd0"]
+
+[node name="StartScene2" type="Node3D" unique_id=1992345958]
+
+[node name="XROrigin3D" parent="." unique_id=708543362 instance=ExtResource("1_nld2j")]
+
+[node name="floor" type="MeshInstance3D" parent="." unique_id=1910624375]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+material_override = ExtResource("2_85q8e")
+mesh = SubResource("BoxMesh_u7rsi")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor" unique_id=1393593540]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D" unique_id=952912336]
+shape = SubResource("ConcavePolygonShape3D_nld2j")
+
+[node name="Cat" parent="." unique_id=851786570 instance=ExtResource("2_s7dif")]
+transform = Transform3D(-10, 0, -8.742278e-07, 0, 10, 0, 8.742278e-07, 0, -10, 0, -0.5, 20)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=825142131]
+environment = SubResource("Environment_gxua3")
+camera_attributes = SubResource("CameraAttributesPractical_hyprt")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1347383676]
+transform = Transform3D(0.33033493, 0.9146593, 0.23297472, -0.39664212, -0.08945599, 0.913604, 0.8564775, -0.3942029, 0.33324206, 7.682, 14.894083, 6.545)
+light_bake_mode = 1
+
+[node name="LightmapGI" type="LightmapGI" parent="." unique_id=1963949292]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.029235, 0)
+camera_attributes = SubResource("CameraAttributesPractical_notft")
+light_data = SubResource("LightmapGIData_pmkd0")
+
+[node name="EndSceneManager" type="Node3D" parent="." unique_id=1669254791]
+script = ExtResource("3_end")
+LabelAnchor = NodePath("../EndText")
+
+[node name="EndText" type="Marker3D" parent="." unique_id=2018325571]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 1.5)

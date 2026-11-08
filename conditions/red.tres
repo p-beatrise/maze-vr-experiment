@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MazeConditionConfig" format=3 uid="uid://de57pj6nmyxhb"]
+
+[ext_resource type="Script" uid="uid://dviw4ijtknc36" path="res://game/experiment/MazeConditionConfig.cs" id="1"]
+[ext_resource type="PackedScene" uid="uid://cysqgt7gcshmy" path="res://models/objects/flowers.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://ijina1n86sjm" path="res://models/objects/penguin.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://dqsruvnjmxp3v" path="res://models/objects/dinosaur.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://cjbf37dvln27r" path="res://models/objects/icecream.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://dlyvatbgshlsl" path="res://models/objects/squirrel.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://w5r6krex3ext" path="res://models/objects/trash_bag.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://blh3o63rwt6hv" path="res://models/objects/fire_truck.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://dhywumatsqxs6" path="res://models/objects/flag.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://bv34281tcdpb8" path="res://models/objects/eight_vases.tscn" id="10"]
+
+[resource]
+script = ExtResource("1")
+MazeId = "red"
+FilterColor = Color(1, 0, 0, 1)
+FilterGamma = 0.5
+RoomObjectNames = PackedStringArray("Puķes", "Pingvīns", "Dinozaurs", "Saldējums", "Vāvere", "Miskastes maiss", "Ugunsdzēsēju mašīna", "Karogs", "Vāzes")
+RoomObjectScenes = [ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7"), ExtResource("8"), ExtResource("9"), ExtResource("10")]

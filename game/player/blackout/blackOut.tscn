@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://e65y78mx208p"]
+
+[ext_resource type="Script" uid="uid://puodfpee75js" path="res://game/player/blackout/blackout.cs" id="1_gw1b4"]
+[ext_resource type="Shader" uid="uid://c57cwreuf6vwj" path="res://game/player/blackout/blackOut.gdshader" id="2_h7lvy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xtlb3"]
+resource_local_to_scene = true
+render_priority = -99
+shader = ExtResource("2_h7lvy")
+shader_parameter/albedo = Color(0, 0, 0, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_prqqa"]
+
+[node name="BlackOut" type="Node3D" unique_id=1009833715]
+script = ExtResource("1_gw1b4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1226700975]
+visible = false
+material_override = SubResource("ShaderMaterial_xtlb3")
+mesh = SubResource("QuadMesh_prqqa")

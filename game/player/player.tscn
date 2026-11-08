@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://cqx0l8m2ugwic"]
+
+[ext_resource type="PackedScene" uid="uid://e65y78mx208p" path="res://game/player/blackout/blackOut.tscn" id="1_4ste8"]
+[ext_resource type="Script" uid="uid://yj2320b78bov" path="res://game/player/PlayerManager.cs" id="1_j0mij"]
+[ext_resource type="Script" uid="uid://3igcfi1pugtr" path="res://game/experiment/HUDManager.cs" id="2_5ghna"]
+[ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="2_anr75"]
+[ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="3_epvkq"]
+[ext_resource type="Script" uid="uid://cfukxgklbi8x3" path="res://game/experiment/ColorFilter.cs" id="3_j0mij"]
+[ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="4_5ghna"]
+[ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="5_j0mij"]
+[ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="6_gb4gm"]
+[ext_resource type="Script" uid="uid://0lmle6044qtu" path="res://game/survey/VRRaycaster.cs" id="6_uv2nh"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4ste8"]
+radius = 0.20751953
+
+[node name="XROrigin3D" type="XROrigin3D" unique_id=708543362 groups=["player"]]
+current = true
+
+[node name="PlayerManager" type="Node" parent="." unique_id=111111111]
+script = ExtResource("1_j0mij")
+
+[node name="XRCamera3D" type="XRCamera3D" parent="." unique_id=1290459487]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -0.1)
+
+[node name="BlackOut" parent="XRCamera3D" unique_id=1009833715 instance=ExtResource("1_4ste8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.9861853)
+
+[node name="Neck" type="Node3D" parent="XRCamera3D" unique_id=408171257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+
+[node name="HUD" type="Node3D" parent="XRCamera3D" unique_id=65816249]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.8)
+script = ExtResource("2_5ghna")
+
+[node name="ColorFilter" type="Node3D" parent="XRCamera3D" unique_id=721076686]
+script = ExtResource("3_j0mij")
+
+[node name="LeftHand" type="XRController3D" parent="." unique_id=868263527]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
+tracker = &"left_hand"
+
+[node name="MovementDirect" parent="LeftHand" unique_id=1696894588 instance=ExtResource("2_anr75")]
+
+[node name="LeftHand" parent="LeftHand" unique_id=1862266090 instance=ExtResource("3_epvkq")]
+
+[node name="Raycast" type="Node3D" parent="LeftHand" unique_id=1263038419]
+script = ExtResource("6_uv2nh")
+
+[node name="RightHand" type="XRController3D" parent="." unique_id=1326673309]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
+tracker = &"right_hand"
+
+[node name="MovementTurn" parent="RightHand" unique_id=1796261157 instance=ExtResource("4_5ghna")]
+
+[node name="RightHand" parent="RightHand" unique_id=1349006636 instance=ExtResource("5_j0mij")]
+
+[node name="Raycast" type="Node3D" parent="RightHand" unique_id=632702215]
+script = ExtResource("6_uv2nh")
+
+[node name="PlayerBody" parent="." unique_id=858898842 instance=ExtResource("6_gb4gm")]
+collision_layer = 524289
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerBody" unique_id=2070010637]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_4ste8")

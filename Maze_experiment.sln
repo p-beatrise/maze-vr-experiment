@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maze_experiment", "Maze_experiment.csproj", "{F37C3BF1-9ABA-44A7-8C85-80AB1FD49E76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F37C3BF1-9ABA-44A7-8C85-80AB1FD49E76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F37C3BF1-9ABA-44A7-8C85-80AB1FD49E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F37C3BF1-9ABA-44A7-8C85-80AB1FD49E76}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{F37C3BF1-9ABA-44A7-8C85-80AB1FD49E76}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{F37C3BF1-9ABA-44A7-8C85-80AB1FD49E76}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{F37C3BF1-9ABA-44A7-8C85-80AB1FD49E76}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

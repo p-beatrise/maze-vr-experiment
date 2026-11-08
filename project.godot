@@ -1,0 +1,72 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Maze experiment"
+run/main_scene="uid://j50tttkymf07"
+config/features=PackedStringArray("4.7", "C#", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+XRToolsUserSettings="*uid://bqgb8i74tm0t"
+XRToolsRumbleManager="*uid://by853dk86g1qw"
+ExperimentManager="*uid://c8stkonge6pn0"
+StartVr="*uid://f54l0dtgkogf"
+
+[display]
+
+window/vsync/vsync_mode=0
+
+[dotnet]
+
+project/assembly_name="Maze_experiment"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")
+
+[global_group]
+
+player=""
+
+[godot_xr_tools]
+
+input/default_snap_turning=false
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
+global_illumination/gi/use_half_resolution=true
+environment/ssao/quality=0
+environment/ssil/quality=0
+anti_aliasing/quality/msaa_3d=1
+environment/glow/upscale_mode=0
+environment/volumetric_fog/use_filter=0
+occlusion_culling/use_occlusion_culling=true
+
+[xr]
+
+openxr/enabled=true
+openxr/foveation_level=3
+openxr/foveation_dynamic=true
+openxr/extensions/hand_tracking=true
+openxr/extensions/hand_tracking_unobstructed_data_source=true
+openxr/extensions/hand_tracking_controller_data_source=true
+openxr/extensions/hand_interaction_profile=true
+shaders/enabled=true
+openxr/extensions/vendor_performance_metrics/capture_on_startup=false

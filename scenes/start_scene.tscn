@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://j50tttkymf07"]
+
+[ext_resource type="PackedScene" uid="uid://cqx0l8m2ugwic" path="res://game/player/player.tscn" id="1_cokmr"]
+[ext_resource type="Material" uid="uid://wr38i4aephff" path="res://game/materials/brick_floor.tres" id="2_2l3yw"]
+[ext_resource type="Script" uid="uid://cmuokk5ruddct" path="res://game/experiment/StartSceneManager.cs" id="2_u7rsi"]
+[ext_resource type="Script" uid="uid://cvpmir3hto816" path="res://game/survey/VRButton.cs" id="3_i331m"]
+[ext_resource type="PackedScene" uid="uid://coi7kslbho8t" path="res://scenes/components/maze_room.tscn" id="4_0kdh5"]
+[ext_resource type="PackedScene" uid="uid://bcvvp8l8psu7j" path="res://models/objects/cat.tscn" id="5_sg87u"]
+[ext_resource type="LightmapGIData" uid="uid://d2dypyiofkhnr" path="res://scenes/components/lightmaps/start_scene.lmbake" id="6_sg87u"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_u7rsi"]
+size = Vector3(100, 0.1, 100)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0kdh5"]
+data = PackedVector3Array(-50, 0.049999997, 50, 50, 0.049999997, 50, -50, -0.049999997, 50, 50, 0.049999997, 50, 50, -0.049999997, 50, -50, -0.049999997, 50, 50, 0.049999997, -50, -50, 0.049999997, -50, 50, -0.049999997, -50, -50, 0.049999997, -50, -50, -0.049999997, -50, 50, -0.049999997, -50, 50, 0.049999997, 50, 50, 0.049999997, -50, 50, -0.049999997, 50, 50, 0.049999997, -50, 50, -0.049999997, -50, 50, -0.049999997, 50, -50, 0.049999997, -50, -50, 0.049999997, 50, -50, -0.049999997, -50, -50, 0.049999997, 50, -50, -0.049999997, 50, -50, -0.049999997, -50, 50, 0.049999997, 50, -50, 0.049999997, 50, 50, 0.049999997, -50, -50, 0.049999997, 50, -50, 0.049999997, -50, 50, 0.049999997, -50, -50, -0.049999997, 50, 50, -0.049999997, 50, -50, -0.049999997, -50, 50, -0.049999997, 50, 50, -0.049999997, -50, -50, -0.049999997, -50)
+
+[sub_resource type="Curve" id="Curve_2l3yw"]
+_data = [Vector2(0, 0), 0.0, 1.6614851, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_2525w"]
+
+[sub_resource type="Curve" id="Curve_6vkx6"]
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_2l3yw"]
+curve_x = SubResource("Curve_2l3yw")
+curve_y = SubResource("Curve_2525w")
+curve_z = SubResource("Curve_6vkx6")
+
+[sub_resource type="Environment" id="Environment_3dgwj"]
+background_mode = 1
+background_color = Color(0.5536147, 0.52034336, 0.52046514, 1)
+ambient_light_color = Color(1, 1, 1, 1)
+adjustment_color_correction = SubResource("CurveXYZTexture_2l3yw")
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_o01gw"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_2ddlt"]
+
+[node name="StartScene" type="Node3D" unique_id=1992345958]
+
+[node name="player" parent="." unique_id=708543362 instance=ExtResource("1_cokmr")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="floor" type="MeshInstance3D" parent="." unique_id=1910624375]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00888443, -0.5175562, 0.011230469)
+mesh = SubResource("BoxMesh_u7rsi")
+surface_material_override/0 = ExtResource("2_2l3yw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor" unique_id=1386645849]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D" unique_id=425287276]
+shape = SubResource("ConcavePolygonShape3D_0kdh5")
+
+[node name="StartSceneManager" type="Node3D" parent="." unique_id=1669254790 node_paths=PackedStringArray("LabelAnchor")]
+script = ExtResource("2_u7rsi")
+LabelAnchor = NodePath("../StartText")
+
+[node name="StartExperimentButton" type="Node3D" parent="." unique_id=1926267449]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1.5)
+script = ExtResource("3_i331m")
+ButtonText = "Sākt"
+Width = 0.9
+Height = 0.45
+Depth = 0.05
+FontSize = 96
+metadata/_custom_type_script = "uid://cvpmir3hto816"
+
+[node name="Marker3D" type="Marker3D" parent="StartExperimentButton" unique_id=31454824]
+
+[node name="StartText" type="Marker3D" parent="." unique_id=2018325570]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -1.5)
+
+[node name="maze_room_blended" parent="." unique_id=1253876277 instance=ExtResource("4_0kdh5")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, -0.45, 0)
+
+[node name="Cat" parent="maze_room_blended" unique_id=851786570 instance=ExtResource("5_sg87u")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=912777029]
+environment = SubResource("Environment_3dgwj")
+camera_attributes = SubResource("CameraAttributesPractical_o01gw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=886965951]
+transform = Transform3D(0.33033493, 0.9146593, 0.23297472, -0.39664212, -0.08945599, 0.913604, 0.8564775, -0.3942029, 0.33324206, 7.682, 14.894083, 6.545)
+light_bake_mode = 1
+
+[node name="LightmapGI" type="LightmapGI" parent="." unique_id=495369228]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.029235, 0)
+camera_attributes = SubResource("CameraAttributesPractical_2ddlt")
+light_data = ExtResource("6_sg87u")

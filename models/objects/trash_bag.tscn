@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://w5r6krex3ext"]
+
+[ext_resource type="PackedScene" uid="uid://b0mgugaq6r266" path="res://models/model_pack/Trash Bag.glb" id="1_fspjx"]
+
+[node name="Root Scene" unique_id=1559851315 instance=ExtResource("1_fspjx")]
+
+[node name="TrashBag_1" parent="RootNode" parent_id_path=PackedInt32Array(1483900990) index="0" unique_id=1276941361]
+transform = Transform3D(250, 0, 0, 0, 250, -1.0927847e-05, 0, 1.0927847e-05, 250, 0, 0, 0)

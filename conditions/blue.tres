@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MazeConditionConfig" format=3 uid="uid://di5klp5nkr8na"]
+
+[ext_resource type="Script" uid="uid://dviw4ijtknc36" path="res://game/experiment/MazeConditionConfig.cs" id="1"]
+[ext_resource type="PackedScene" uid="uid://cflx81hmx4nrc" path="res://models/objects/chair.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bvwm2w5w5stks" path="res://models/objects/couch.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://bkdher0inaci" path="res://models/objects/donut.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://bk7invx8gks4t" path="res://models/objects/house.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://re1guxvx4fch" path="res://models/objects/pizza.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://chofu67j6ebgp" path="res://models/objects/burger.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://dow2mflq04jh3" path="res://models/objects/drawer.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://8gcwrjak5t2f" path="res://models/objects/ladder.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://c4l5h4emg6tra" path="res://models/objects/chicken.tscn" id="10"]
+
+[resource]
+script = ExtResource("1")
+MazeId = "blue"
+FilterColor = Color(0, 0, 1, 1)
+FilterGamma = 0.5
+RoomObjectNames = PackedStringArray("Krēsls", "Dīvāns", "Virtulis", "Māja", "Pica", "Burgeris", "Kumode", "Kāpnes", "Vista")
+RoomObjectScenes = [ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7"), ExtResource("8"), ExtResource("9"), ExtResource("10")]

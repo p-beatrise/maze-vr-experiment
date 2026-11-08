@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cmo1fh7p28v5q"]
+
+[ext_resource type="PackedScene" uid="uid://cvmaxlmq5net4" path="res://models/model_pack/Bird.glb" id="1_m33rv"]
+
+[node name="Root Scene" unique_id=1696701348 instance=ExtResource("1_m33rv")]
+
+[node name="Ernest" parent="RootNode" parent_id_path=PackedInt32Array(1261128965) index="0" unique_id=769517484]
+transform = Transform3D(300, 0, 0, 0, 300, 0, 0, 0, 300, 0, 0, -0.61981165)

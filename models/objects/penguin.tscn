@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ijina1n86sjm"]
+
+[ext_resource type="PackedScene" uid="uid://pa48xltdcwwk" path="res://models/model_pack/Penguin.glb" id="1_tk7ca"]
+
+[node name="Penguin" unique_id=890714603 instance=ExtResource("1_tk7ca")]
+
+[node name="Penguin_01_Cube_044" parent="." index="0" unique_id=1944854904]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)

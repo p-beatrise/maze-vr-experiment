@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://diyu06cw06syv"]
+
+[ext_resource type="Script" uid="uid://ck4yn3hxuobj7" path="res://addons/godot-xr-tools/player/player_body.gd" id="1"]
+[ext_resource type="Script" uid="uid://cjfu28jmrajlo" path="res://addons/godot-xr-tools/overrides/ground_physics_settings.gd" id="2_f2hdk"]
+
+[sub_resource type="Resource" id="Resource_gemwb"]
+script = ExtResource("2_f2hdk")
+metadata/_custom_type_script = "uid://cjfu28jmrajlo"
+
+[node name="PlayerBody" type="CharacterBody3D" unique_id=858898842 groups=["player_body"]]
+process_priority = -100
+process_physics_priority = -100
+collision_layer = 524288
+collision_mask = 1023
+script = ExtResource("1")
+physics = SubResource("Resource_gemwb")

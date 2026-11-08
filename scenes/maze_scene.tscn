@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dpgbqdwojx4do"]
+
+[ext_resource type="Script" uid="uid://bupoj6ludkr4n" path="res://game/experiment/MazeManager.cs" id="1_mgr"]
+[ext_resource type="PackedScene" uid="uid://cqx0l8m2ugwic" path="res://game/player/player.tscn" id="2_player"]
+
+[node name="maze_scene" type="Node3D" unique_id=981679589]
+script = ExtResource("1_mgr")
+
+[node name="Player" parent="." unique_id=1404656458 instance=ExtResource("2_player")]

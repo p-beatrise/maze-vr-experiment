@@ -1,0 +1,79 @@
+[gd_resource type="Resource" script_class="SurveyConfig" format=3 uid="uid://dlixmm3yvjsts"]
+
+[ext_resource type="Script" uid="uid://dkjwwy01clwq4" path="res://game/survey/SurveyQuestion.cs" id="1_4vihy"]
+[ext_resource type="Script" uid="uid://cxji5enf7kyx8" path="res://game/survey/SurveyConfig.cs" id="1_e21sb"]
+
+[sub_resource type="Resource" id="Resource_kryo3"]
+script = ExtResource("1_4vihy")
+QuestionText = "Es jūtos bēdīgs"
+FieldName = "bedigs"
+Options = PackedStringArray("Ļoti nedaudz vai nemaz", "Nedaudz", "Mēreni", "Diezgan daudz", "Ārkārtīgi")
+metadata/_custom_type_script = "uid://dkjwwy01clwq4"
+
+[sub_resource type="Resource" id="Resource_4vihy"]
+script = ExtResource("1_4vihy")
+QuestionText = "Es jūtos dusmīgs"
+FieldName = "dusmigs"
+Options = PackedStringArray("Ļoti nedaudz vai nemaz", "Nedaudz", "Mēreni", "Diezgan daudz", "Ārkārtīgi")
+metadata/_custom_type_script = "uid://dkjwwy01clwq4"
+
+[sub_resource type="Resource" id="Resource_rfvbk"]
+script = ExtResource("1_4vihy")
+QuestionText = "Es jūtos modrs"
+FieldName = "modrs"
+Options = PackedStringArray("Ļoti nedaudz vai nemaz", "Nedaudz", "Mēreni", "Diezgan daudz", "Ārkārtīgi")
+metadata/_custom_type_script = "uid://dkjwwy01clwq4"
+
+[sub_resource type="Resource" id="Resource_rn585"]
+script = ExtResource("1_4vihy")
+QuestionText = "Es jūtos nokaunējies"
+FieldName = "nokaunejies"
+Options = PackedStringArray("Ļoti nedaudz vai nemaz", "Nedaudz", "Mēreni", "Diezgan daudz", "Ārkārtīgi")
+metadata/_custom_type_script = "uid://dkjwwy01clwq4"
+
+[sub_resource type="Resource" id="Resource_313y3"]
+script = ExtResource("1_4vihy")
+QuestionText = "Es jūtos iedvesmots"
+FieldName = "iedvesmots"
+Options = PackedStringArray("Ļoti nedaudz vai nemaz", "Nedaudz", "Mēreni", "Diezgan daudz", "Ārkārtīgi")
+metadata/_custom_type_script = "uid://dkjwwy01clwq4"
+
+[sub_resource type="Resource" id="Resource_xh77u"]
+script = ExtResource("1_4vihy")
+QuestionText = "Es jūtos nervozs"
+FieldName = "nervozs"
+Options = PackedStringArray("Ļoti nedaudz vai nemaz", "Nedaudz", "Mēreni", "Diezgan daudz", "Ārkārtīgi")
+metadata/_custom_type_script = "uid://dkjwwy01clwq4"
+
+[sub_resource type="Resource" id="Resource_j86a0"]
+script = ExtResource("1_4vihy")
+QuestionText = "Es jūtos apņēmīgs"
+FieldName = "apnemigs"
+Options = PackedStringArray("Ļoti nedaudz vai nemaz", "Nedaudz", "Mēreni", "Diezgan daudz", "Ārkārtīgi")
+metadata/_custom_type_script = "uid://dkjwwy01clwq4"
+
+[sub_resource type="Resource" id="Resource_yd7al"]
+script = ExtResource("1_4vihy")
+QuestionText = "Es jūtos vērīgs"
+FieldName = "verigs"
+Options = PackedStringArray("Ļoti nedaudz vai nemaz", "Nedaudz", "Mēreni", "Diezgan daudz", "Ārkārtīgi")
+metadata/_custom_type_script = "uid://dkjwwy01clwq4"
+
+[sub_resource type="Resource" id="Resource_mw2r3"]
+script = ExtResource("1_4vihy")
+QuestionText = "Es jūtos nobijies"
+FieldName = "nobijies"
+Options = PackedStringArray("Ļoti nedaudz vai nemaz", "Nedaudz", "Mēreni", "Diezgan daudz", "Ārkārtīgi")
+metadata/_custom_type_script = "uid://dkjwwy01clwq4"
+
+[sub_resource type="Resource" id="Resource_etj5x"]
+script = ExtResource("1_4vihy")
+QuestionText = "Es jūtos aktīvs"
+FieldName = "aktivs"
+Options = PackedStringArray("Ļoti nedaudz vai nemaz", "Nedaudz", "Mēreni", "Diezgan daudz", "Ārkārtīgi")
+metadata/_custom_type_script = "uid://dkjwwy01clwq4"
+
+[resource]
+script = ExtResource("1_e21sb")
+Questions = [SubResource("Resource_kryo3"), SubResource("Resource_4vihy"), SubResource("Resource_rfvbk"), SubResource("Resource_rn585"), SubResource("Resource_313y3"), SubResource("Resource_xh77u"), SubResource("Resource_j86a0"), SubResource("Resource_yd7al"), SubResource("Resource_mw2r3"), SubResource("Resource_etj5x")]
+metadata/_custom_type_script = "uid://cxji5enf7kyx8"

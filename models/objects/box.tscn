@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cwddgmcao8vdk"]
+
+[ext_resource type="PackedScene" uid="uid://cj2e1sn4t3til" path="res://models/model_pack/Crate.glb" id="1_elkoi"]
+
+[node name="Root Scene" unique_id=1055757957 instance=ExtResource("1_elkoi")]
+
+[node name="Crate" parent="RootNode" parent_id_path=PackedInt32Array(1949161144) index="0" unique_id=1304605115]
+transform = Transform3D(200, 0, 0, 0, -8.742278e-06, 200, 0, -200, -8.742278e-06, 0, 1.0007194, 0)
